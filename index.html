@@ -1,0 +1,566 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>포트폴리오 | Creative Designer</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+    <link rel="stylesheet" href="style.css" />
+    <!-- Swiper CSS CDN -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+  </head>
+  <body>
+    <!-- Loading Screen -->
+    <div class="loading">
+      <div class="loading-text">포트폴리오 데우는 중...</div>
+    </div>
+
+    <!-- Navigation -->
+    <nav class="nav">
+      <ul>
+        <li><a href="#hero">Home</a></li>
+        <li><a href="#projects">Projects</a></li>
+        <li><a href="#other-works">Other Works</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="hero" class="hero">
+      <div class="hero-content">
+        <h1>Thoughtful Design for Everyday Life</h1>
+        <p>당신의 일상이 좀 더 따뜻해 지도록</p>
+      </div>
+      <div class="scroll-indicator"></div>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects" class="section projects">
+      <div class="container">
+        <h2 class="section-title">PROJECTS</h2>
+        <div class="swiper project-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="https://woogiewoo.github.io/project_1/" class="project-card" target="_blank">
+                <div class="project-image project-image_1"></div>
+                <h3>웹 사이트 리디자인</h3>
+                <p>로고부터 전체 브랜딩까지 <br />일관된 디자인 시스템을 구축했습니다.</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="images/project_2_page.jpg" class="project-card" target="_blank">
+                <div class="project-image project-image_2"></div>
+                <h3>상세페이지 디자인</h3>
+                <p>직관적인 이미지와 <br />아름다운 비주얼의 조화를 추구했습니다.</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="images/2401110076_박성욱_3단 리플렛 리디자인_v8.pdf" class="project-card" target="_blank">
+                <div class="project-image project-image_3"></div>
+                <h3>일러스트 작업</h3>
+                <p>임팩트 있는 비주얼 커뮤니케이션을 위한<br />다양한 스타일의 일러스트 작업입니다.</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Other Works Section -->
+    <section id="other-works" class="section other-works">
+      <div class="container">
+        <h2 class="section-title">Other Works</h2>
+        <div class="swiper works-swiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <a href="images/2401110076_박성욱_자유주제 중철_frederic malle_v2.pdf" class="work-item work-item_1" target="_blank">
+                <div class="work-image"></div>
+                <h3>제품 패키지 디자인</h3>
+                <p>제품의 가치를 높이는 <br />패키지 디자인 작업입니다.</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="images/work_2.png" class="work-item work-item_2" target="_blank">
+                <div class="work-image"></div>
+                <h3>패키지 리디자인</h3>
+                <p>감성을 전달하는<br />패키지 리디자인입니다.</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="images/work_3.png" class="work-item work-item_3" target="_blank">
+                <div class="work-image"></div>
+                <h3>포스터 리디자인</h3>
+                <p>사용자 경험을 고려한<br />포스터 리디자인입니다.</p>
+              </a>
+            </div>
+            <div class="swiper-slide">
+              <a href="images/work_4.png" class="work-item work-item_4" target="_blank">
+                <div class="work-image"></div>
+                <h3>제품 포스터 디자인</h3>
+                <p>제품의 감성을 살리는<br />포스터 디자인 작업 입니다.</p>
+              </a>
+            </div>
+          </div>
+          <div class="swiper-pagination works-swiper-pagination"></div>
+        </div>
+      </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="section about">
+      <div class="container">
+        <h2 class="section-title">ABOUT ME</h2>
+        <div class="about-content">
+          <div class="about-image">
+            <img src="images/프로필.jpg" alt="프로필 이미지" />
+          </div>
+          <div class="about-text">
+            <h3>안녕하세요, 당신의 일상을 따뜻하게 만드는 디자이너 박성욱입니다</h3>
+            <p>
+              저는 디자인을 통해 사람들의 일상이 조금 더 따뜻하고, 귀엽고, 편안해지길 바랍니다.<br />
+              단정한 구조 안에 배려와 감성, 그리고 작은 디테일까지도 사랑스럽게 담아내는 것을 좋아합니다.
+              <br /><br />
+              사용자 중심의 시선으로 무엇이 불편한지 먼저 살피고,<br />
+              웹, 브랜드, UI/UX 등 다양한 분야에서 조화롭고 감각적인 디자인 솔루션을 만들어갑니다.
+              <br /><br />
+              디자인은 결국 사람을 위한 언어라고 믿기에, 저는 늘 더 듣고, 더 관찰하며,<br />
+              보는 순간 기분 좋아지는 따뜻한 디자인을 계속해서 그려나가고 싶습니다.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer" id="contact">
+      <div class="container">
+        <div class="footer-content">
+          <h3>CONTACT</h3>
+          <div class="contact-info">
+            <div class="contact-item">📧 email@example.com</div>
+            <div class="contact-item">📱 010-1234-5678</div>
+            <div class="contact-item">💼 LinkedIn</div>
+            <div class="contact-item">🎨 Behance</div>
+          </div>
+          <p>&copy; 2025 Creative Portfolio. All rights reserved.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- 맨 위로 가는 글래스 버튼 -->
+    <button id="scrollTopBtn" aria-label="맨 위로 이동">
+      <svg width="28" height="28" viewBox="0 0 28 28" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M14 20V8" stroke="#8b6f47" stroke-width="2.5" stroke-linecap="round" />
+        <path d="M8.5 13L14 8L19.5 13" stroke="#8b6f47" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round" />
+      </svg>
+    </button>
+
+    <!-- Swiper JS CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script>
+      // GSAP ScrollTrigger 등록
+      gsap.registerPlugin(ScrollTrigger);
+
+      // 로딩 애니메이션
+      gsap
+        .timeline()
+        .to('.loading-text', { opacity: 1, duration: 0.5 })
+        .to('.loading-text', { opacity: 0, duration: 0.5, delay: 1 })
+        .to('.loading', { y: '-100%', duration: 0.8, ease: 'power2.inOut' })
+        .call(() => {
+          document.querySelector('.loading').style.display = 'none';
+          initAnimations();
+        });
+
+      function initAnimations() {
+        // Hero 섹션 애니메이션
+        gsap
+          .timeline()
+          .to('.hero-content', {
+            opacity: 1,
+            y: 0,
+            duration: 1.2,
+            ease: 'power2.out',
+          })
+          .to(
+            '.scroll-indicator',
+            {
+              opacity: 1,
+              duration: 0.8,
+            },
+            '-=0.5'
+          )
+          .to(
+            '.nav',
+            {
+              opacity: 1,
+              duration: 0.8,
+            },
+            '-=0.5'
+          );
+
+        // 섹션별 페이드인 애니메이션
+        gsap.utils.toArray('.section').forEach((section) => {
+          gsap.to(section, {
+            opacity: 1,
+            y: 0,
+            duration: 1,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: section,
+              start: 'top 80%',
+              end: 'bottom 20%',
+              toggleActions: 'play none none reverse',
+            },
+          });
+        });
+
+        // 섹션 타이틀 애니메이션
+        gsap.utils.toArray('.section-title').forEach((title) => {
+          gsap.to(title, {
+            opacity: 1,
+            y: 0,
+            duration: 0.8,
+            ease: 'power2.out',
+            scrollTrigger: {
+              trigger: title,
+              start: 'top 85%',
+              toggleActions: 'play none none reverse',
+            },
+          });
+        });
+
+        // 프로젝트 카드 스태거 애니메이션
+        gsap.to('.project-card', {
+          opacity: 1,
+          y: 0,
+          duration: 0.6,
+          stagger: 0.2,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.project-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+
+        // Other Works 아이템 스케일 애니메이션
+        gsap.to('.work-item', {
+          opacity: 1,
+          scale: 1,
+          duration: 0.5,
+          stagger: 0.15,
+          ease: 'back.out(1.7)',
+          scrollTrigger: {
+            trigger: '.works-grid',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+
+        // About 섹션 좌우 슬라이드 애니메이션
+        gsap.to('.about-image', {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.about-content',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+
+        gsap.to('.about-text', {
+          opacity: 1,
+          x: 0,
+          duration: 1,
+          delay: 0.3,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.about-content',
+            start: 'top 80%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+
+        // Footer 애니메이션
+        gsap.to('.footer-content', {
+          opacity: 1,
+          y: 0,
+          duration: 0.8,
+          ease: 'power2.out',
+          scrollTrigger: {
+            trigger: '.footer',
+            start: 'top 90%',
+            toggleActions: 'play none none reverse',
+          },
+        });
+
+        // 패럴랙스 효과
+        gsap.to('.hero', {
+          backgroundPosition: '50% 100px',
+          ease: 'none',
+          scrollTrigger: {
+            trigger: '.hero',
+            start: 'top top',
+            end: 'bottom top',
+            scrub: true,
+          },
+        });
+
+        // 네비게이션 스무스 스크롤
+        document.querySelectorAll('.nav a').forEach((anchor) => {
+          anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            const target = document.querySelector(this.getAttribute('href'));
+            if (target) {
+              target.scrollIntoView({
+                behavior: 'smooth',
+                block: 'start',
+              });
+            }
+          });
+        });
+
+        // 맨 위로 가는 버튼 동작 (애니메이션 포함)
+        const scrollTopBtn = document.getElementById('scrollTopBtn');
+        let lastScrollY = 0;
+        function toggleScrollBtn() {
+          if (window.scrollY > 200) {
+            scrollTopBtn.classList.add('show');
+          } else {
+            scrollTopBtn.classList.remove('show');
+          }
+        }
+        window.addEventListener('scroll', toggleScrollBtn);
+        scrollTopBtn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      }
+
+      // 마우스 호버 효과 제거 (project-card에 대한 gsap hover 효과 삭제)
+
+      var swiper = new Swiper('.project-swiper', {
+        effect: 'coverflow',
+        grabCursor: true,
+        centeredSlides: true,
+        slidesPerView: 'auto',
+        coverflowEffect: {
+          rotate: 50,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        },
+        pagination: {
+          el: '.swiper-pagination',
+        },
+      });
+
+      var worksSwiper = new Swiper('.works-swiper', {
+        effect: 'cards',
+        grabCursor: true,
+        pagination: {
+          el: '.works-swiper-pagination',
+        },
+      });
+    </script>
+    <style>
+      .project-swiper {
+        width: 100%;
+        padding-top: 100px;
+        padding-bottom: 50px;
+      }
+      .project-swiper .swiper-slide {
+        width: 400px;
+        height: 540px;
+        background: #fff;
+        border-radius: 20px;
+        overflow: hidden;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.3s;
+      }
+      .project-swiper .swiper-slide.swiper-slide-active {
+        box-shadow: 0 16px 40px rgba(0, 0, 0, 0.18);
+        z-index: 2;
+      }
+      .project-card {
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 0 2rem 0;
+        min-height: 500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+      }
+      .project-image {
+        width: 100%;
+        height: 320px;
+        border-radius: 0;
+        margin-bottom: 1.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: block;
+      }
+      .project-image_1 {
+        background-image: url('images/project_1.png');
+      }
+      .project-image_2 {
+        background-image: url('images/project_2.gif');
+      }
+      .project-image_3 {
+        background-image: url('images/project_3.png');
+      }
+      .project-card h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: #4a4a4a;
+      }
+      .project-card p {
+        color: #666;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+      .swiper-pagination {
+        margin-top: 20px;
+      }
+
+      .works-swiper {
+        width: 400px;
+        height: 540px;
+        margin: 0 auto;
+      }
+      .works-swiper .swiper-slide {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 20px;
+        background: #fff;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.13);
+        transition: box-shadow 0.3s;
+        height: 100%;
+      }
+      .work-item {
+        background: transparent;
+        border-radius: 0;
+        box-shadow: none;
+        padding: 0 0 2rem 0;
+        min-height: 500px;
+        text-align: center;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: flex-start;
+        width: 100%;
+        height: 100%;
+        text-decoration: none;
+      }
+      .work-image {
+        width: 100%;
+        height: 320px;
+        border-radius: 0;
+        margin-bottom: 1.5rem;
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        overflow: hidden;
+        display: block;
+      }
+      .work-item_1 .work-image {
+        background-image: url('images/work_1.png');
+      }
+      .work-item_2 .work-image {
+        background-image: url('images/work_2.png');
+      }
+      .work-item_3 .work-image {
+        background-image: url('images/work_3.png');
+      }
+      .work-item_4 .work-image {
+        background-image: url('images/work_4.png');
+      }
+      .work-item h3 {
+        font-size: 1.3rem;
+        margin-bottom: 1rem;
+        color: #666666;
+      }
+      .work-item p {
+        color: #9e9e9e;
+        line-height: 1.6;
+        font-size: 1rem;
+      }
+      .works-swiper-pagination {
+        margin-top: 20px;
+      }
+
+      #scrollTopBtn {
+        position: fixed;
+        right: 32px;
+        bottom: 36px;
+        z-index: 1200;
+        width: 60px;
+        height: 60px;
+        border: none;
+        border-radius: 50%;
+        background: rgba(255, 255, 255, 0.32);
+        box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.18);
+        backdrop-filter: blur(12px);
+        -webkit-backdrop-filter: blur(12px);
+        cursor: pointer;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        transition: box-shadow 0.22s, transform 0.22s, background 0.22s, opacity 0.3s, scale 0.3s;
+        opacity: 0;
+        scale: 0.7;
+        pointer-events: none;
+      }
+      #scrollTopBtn.show {
+        opacity: 1;
+        scale: 1;
+        pointer-events: auto;
+      }
+      #scrollTopBtn:hover {
+        background: rgba(255, 255, 255, 0.55);
+        box-shadow: 0 12px 36px 0 rgba(139, 111, 71, 0.18);
+        transform: translateY(-6px) scale(1.08);
+      }
+      #scrollTopBtn svg {
+        display: block;
+        margin-top: 2px;
+      }
+      #scrollTopBtn svg path {
+        transition: stroke 0.2s;
+      }
+      #scrollTopBtn:hover svg path {
+        stroke: #d4a15a;
+      }
+      @media (max-width: 600px) {
+        #scrollTopBtn {
+          right: 16px;
+          bottom: 18px;
+          width: 48px;
+          height: 48px;
+        }
+        #scrollTopBtn svg {
+          width: 22px;
+          height: 22px;
+        }
+      }
+    </style>
+  </body>
+</html>
