@@ -520,3 +520,9 @@ textarea {
     cursor: auto !important;
   }
 }
+
+a,
+button,
+.hoverable {
+  cursor: none !important;
+}
