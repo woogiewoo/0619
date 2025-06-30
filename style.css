@@ -1,3 +1,9 @@
+@font-face {
+  font-family: 'Paperlogy-8ExtraBold';
+  src: url('https://fastly.jsdelivr.net/gh/projectnoonnu/2408-3@1.0/Paperlogy-8ExtraBold.woff2') format('woff2');
+  font-style: normal;
+}
+
 * {
   margin: 0;
   padding: 0;
@@ -9,10 +15,22 @@ html {
 }
 
 body {
-  font-family: 'Arial', sans-serif;
+  font-family: 'Paperlogy-8ExtraBold', Arial, sans-serif;
   line-height: 1.6;
   color: #4a4a4a;
   overflow-x: hidden;
+  cursor: none;
+}
+
+/* 주요 텍스트 요소에도 폰트 적용 */
+.hero h1,
+.hero p,
+.section-title,
+.nav a,
+button,
+input,
+textarea {
+  font-family: 'Paperlogy-8ExtraBold', Arial, sans-serif;
 }
 
 /* Hero Section */
@@ -52,12 +70,14 @@ body {
   color: #8b6f47;
   font-weight: 300;
   letter-spacing: 2px;
+  text-shadow: 2px 4px 16px rgba(139, 111, 71, 0.18), 0 2px 8px rgba(212, 161, 90, 0.12);
 }
 
 .hero p {
   font-size: 1.5rem;
   color: #a0855b;
   margin-bottom: 2rem;
+  font-weight: 500;
 }
 
 .scroll-indicator {
@@ -115,7 +135,7 @@ body {
 
 .nav a {
   text-decoration: none;
-  color: #222;
+  color: #8b6f47;
   font-weight: 700;
   font-size: 1.08rem;
   letter-spacing: 0.02em;
@@ -125,6 +145,7 @@ body {
   background: transparent;
   box-shadow: none;
   position: relative;
+  cursor: none;
 }
 
 .nav a:hover,
@@ -192,6 +213,7 @@ body {
   transition: transform 0.3s ease;
   min-height: 520px; /* 세로 길이만 늘림 (원하는 값으로 조정) */
   text-align: center;
+  cursor: none;
 }
 
 .project-card:hover {
@@ -259,6 +281,7 @@ body {
   justify-content: flex-start;
   transform: scale(0.8);
   opacity: 0;
+  cursor: none;
 }
 
 .work-image {
@@ -397,6 +420,19 @@ body {
     justify-content: center;
     margin-bottom: 2rem;
   }
+  .custom-cursor,
+  .cursor-trail {
+    display: none;
+  }
+
+  body,
+  a,
+  button,
+  .project-card,
+  .work-item,
+  .nav a {
+    cursor: auto;
+  }
 }
 
 /* Loading Animation */
@@ -417,4 +453,58 @@ body {
   font-size: 2rem;
   color: #8b6f47;
   opacity: 0;
+}
+
+/* 커스텀 마우스 커서 */
+.custom-cursor {
+  position: fixed;
+  width: 20px;
+  height: 20px;
+  background: rgba(139, 111, 71, 0.8);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9999;
+  mix-blend-mode: difference;
+  transition: all 0.1s ease;
+  transform: translate(-50%, -50%);
+}
+
+.cursor-trail {
+  position: fixed;
+  width: 8px;
+  height: 8px;
+  background: rgba(212, 161, 90, 0.6);
+  border-radius: 50%;
+  pointer-events: none;
+  z-index: 9998;
+  mix-blend-mode: difference;
+  transition: all 0.15s ease;
+  transform: translate(-50%, -50%);
+}
+
+/* 호버 효과 */
+.cursor-hover {
+  width: 40px;
+  height: 40px;
+  background: rgba(139, 111, 71, 0.9);
+  border: 2px solid rgba(212, 161, 90, 0.8);
+  transform: translate(-50%, -50%) scale(1.2);
+}
+
+.trail-hover {
+  width: 16px;
+  height: 16px;
+  background: rgba(212, 161, 90, 0.8);
+  transform: translate(-50%, -50%) scale(1.5);
+}
+
+/* 클릭 효과 */
+.cursor-click {
+  transform: translate(-50%, -50%) scale(0.8);
+  background: rgba(139, 111, 71, 1);
+}
+
+.trail-click {
+  transform: translate(-50%, -50%) scale(0.6);
+  background: rgba(212, 161, 90, 1);
 }
