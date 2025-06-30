@@ -11,9 +11,9 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   </head>
   <body>
-    <!-- 커스텀 마우스 커서 -->
-    <div class="custom-cursor" id="customCursor"></div>
-    <div class="cursor-trail" id="cursorTrail"></div>
+    <!-- Brown, cozy custom cursor and ripple -->
+    <div class="brown-cursor" id="brownCursor"></div>
+    <div class="brown-cursor-ripple" id="brownCursorRipple"></div>
 
     <!-- Loading Screen -->
     <div class="loading">
@@ -415,67 +415,6 @@
         floatingObject('.bubble4', 1.8, 30);
         floatingObject('.bubble5', 1.2, 20);
         floatingObject('.bubble6', 2.1, 35);
-
-        // 커스텀 마우스 커서 효과
-        const cursor = document.getElementById('customCursor');
-        const cursorTrail = document.getElementById('cursorTrail');
-        let mouseX = 0;
-        let mouseY = 0;
-        let cursorX = 0;
-        let cursorY = 0;
-        let trailX = 0;
-        let trailY = 0;
-
-        // 마우스 움직임 감지
-        document.addEventListener('mousemove', (e) => {
-          mouseX = e.clientX;
-          mouseY = e.clientY;
-        });
-
-        // 커서 애니메이션
-        function animateCursor() {
-          // 메인 커서 부드러운 움직임
-          cursorX += (mouseX - cursorX) * 0.1;
-          cursorY += (mouseY - cursorY) * 0.1;
-
-          // 트레일 커서 지연 움직임
-          trailX += (mouseX - trailX) * 0.05;
-          trailY += (mouseY - trailY) * 0.05;
-
-          cursor.style.left = cursorX + 'px';
-          cursor.style.top = cursorY + 'px';
-          cursorTrail.style.left = trailX + 'px';
-          cursorTrail.style.top = trailY + 'px';
-
-          requestAnimationFrame(animateCursor);
-        }
-        animateCursor();
-
-        // 호버 효과
-        const hoverElements = document.querySelectorAll('a, button, .project-card, .work-item, .nav a');
-
-        hoverElements.forEach((element) => {
-          element.addEventListener('mouseenter', () => {
-            cursor.classList.add('cursor-hover');
-            cursorTrail.classList.add('trail-hover');
-          });
-
-          element.addEventListener('mouseleave', () => {
-            cursor.classList.remove('cursor-hover');
-            cursorTrail.classList.remove('trail-hover');
-          });
-        });
-
-        // 클릭 효과
-        document.addEventListener('click', () => {
-          cursor.classList.add('cursor-click');
-          cursorTrail.classList.add('trail-click');
-
-          setTimeout(() => {
-            cursor.classList.remove('cursor-click');
-            cursorTrail.classList.remove('trail-click');
-          }, 150);
-        });
       }
 
       // 마우스 호버 효과 제거 (project-card에 대한 gsap hover 효과 삭제)
@@ -503,6 +442,69 @@
         pagination: {
           el: '.works-swiper-pagination',
         },
+      });
+    </script>
+    <script>
+      // Brown, cozy custom cursor effect
+      const brownCursor = document.getElementById('brownCursor');
+      const brownRipple = document.getElementById('brownCursorRipple');
+      let mouseX = window.innerWidth / 2,
+        mouseY = window.innerHeight / 2;
+      let cursorX = mouseX,
+        cursorY = mouseY;
+      let rippleX = mouseX,
+        rippleY = mouseY;
+      // Hide on mobile
+      function isMobile() {
+        return window.matchMedia('(max-width: 800px), (pointer: coarse)').matches;
+      }
+      function showCursors(show) {
+        brownCursor.style.display = show ? 'block' : 'none';
+        brownRipple.style.display = show ? 'block' : 'none';
+      }
+      showCursors(!isMobile());
+      window.addEventListener('resize', () => showCursors(!isMobile()));
+      // Move cursor
+      document.addEventListener('mousemove', (e) => {
+        mouseX = e.clientX;
+        mouseY = e.clientY;
+        brownCursor.style.opacity = 1;
+        brownRipple.style.opacity = 0.5;
+      });
+      function animate() {
+        cursorX += (mouseX - cursorX) * 0.22;
+        cursorY += (mouseY - cursorY) * 0.22;
+        rippleX += (mouseX - rippleX) * 0.1;
+        rippleY += (mouseY - rippleY) * 0.1;
+        brownCursor.style.left = cursorX + 'px';
+        brownCursor.style.top = cursorY + 'px';
+        brownRipple.style.left = rippleX + 'px';
+        brownRipple.style.top = rippleY + 'px';
+        requestAnimationFrame(animate);
+      }
+      animate();
+      // Hover effect for clickable elements
+      function addHoverEvents(selector) {
+        document.querySelectorAll(selector).forEach((el) => {
+          el.addEventListener('mouseenter', () => {
+            brownCursor.classList.add('hover');
+            brownRipple.classList.add('active');
+          });
+          el.addEventListener('mouseleave', () => {
+            brownCursor.classList.remove('hover');
+            brownRipple.classList.remove('active');
+          });
+        });
+      }
+      addHoverEvents('a, button, .hoverable');
+      // Click ripple
+      document.addEventListener('mousedown', () => {
+        brownCursor.classList.add('click');
+        brownRipple.classList.add('active');
+        setTimeout(() => {
+          brownCursor.classList.remove('click');
+          brownRipple.classList.remove('active');
+        }, 350);
       });
     </script>
     <style>
